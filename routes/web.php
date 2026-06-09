@@ -6,6 +6,7 @@ use App\Http\Controllers\PageController;
 use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\BlogController ;
 use App\Http\Controllers\PegawaiDBController;
+use App\Http\Controllers\BajuDBController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -56,3 +57,11 @@ Route::get('/pegawai/edit/{id}',[PegawaiDBController::class, 'edit']);
 Route::post('/pegawai/update',[PegawaiDBController::class, 'update']);
 Route::get('/pegawai/hapus/{id}',[PegawaiDBController::class, 'hapus']);
 Route::get('/pegawai/cari',[PegawaiDBController::class, 'cari']);
+
+Route::get('/baju',[BajuDBController::class, 'index']);
+Route::get('/baju/tambah',[BajuDBController::class, 'tambah']);
+Route::post('/baju/store',[BajuDBController::class, 'store']);
+Route::get('/baju/edit/{id}',[BajuDBController::class, 'edit']);
+Route::post('/baju/update',[BajuDBController::class, 'update']);
+Route::get('/baju/hapus/{id}',[BajuDBController::class, 'hapus']);
+Route::get('/baju/cari',[BajuDBController::class, 'cari']);
