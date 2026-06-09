@@ -42,6 +42,6 @@
 </table>
 
 {{ $baju->links() }}
-```
+
 
 @endsection
