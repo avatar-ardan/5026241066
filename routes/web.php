@@ -7,6 +7,7 @@ use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\BlogController ;
 use App\Http\Controllers\PegawaiDBController;
 use App\Http\Controllers\BajuDBController;
+use App\Http\Controllers\KeranjangDBController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -65,3 +66,8 @@ Route::get('/baju/edit/{id}',[BajuDBController::class, 'edit']);
 Route::post('/baju/update',[BajuDBController::class, 'update']);
 Route::get('/baju/hapus/{id}',[BajuDBController::class, 'hapus']);
 Route::get('/baju/cari',[BajuDBController::class, 'cari']);
+
+Route::get('/keranjang',[KeranjangDBController::class, 'index']);
+Route::get('/keranjang/tambah',[KeranjangDBController::class, 'tambah']);
+Route::post('/keranjang/store',[KeranjangDBController::class, 'store']);
+Route::get('/keranjang/hapus/{id}',[KeranjangDBController::class, 'hapus']);
